@@ -18,7 +18,7 @@ double INRsell = 92.8334;
 //Vartotojas pasirenka is kokios valiutos i kokia kita valiuta jis nori konvertuoti iraso suma ir gali pamatyti irasyta suma ir salia konvertuotos valiutos suma
 void getCompareCurrency() {
     int op = 0;
-    int pradk;
+    double pradk;
     double galutk;
     while (op != 7) {
         cout << "Pasirinkite kuria valiuta Jus norite konvertuoti i kita valiuta." << endl;
@@ -34,37 +34,37 @@ void getCompareCurrency() {
             cout << "Irasykite norima EUR valiutos kieki" << endl;
             cin >> pradk;
             galutk = pradk * GBPcompare;
-            cout << fixed <<  pradk << setprecision(2) << " EUR " << galutk << setprecision(2) << " GBP." << endl;
+            cout << pradk << fixed <<setprecision(2) << " EUR " << galutk << fixed <<  setprecision(2) << " GBP." << endl;
             break;
             case 2:
             cout << "Irasykite norima EUR valiutos kieki" << endl;
             cin >> pradk;
             galutk = pradk * USDcompare;
-            cout << fixed << pradk << setprecision(2) << " EUR " << galutk << setprecision(2) << " USD." << endl;
+            cout <<  pradk << fixed <<setprecision(2) << " EUR " << galutk << fixed <<setprecision(2) << " USD." << endl;
             break;
             case 3:
             cout << "Irasykite norima EUR valiutos kieki" << endl;
             cin >> pradk;
             galutk = pradk * INRcompare;
-            cout << fixed << pradk << setprecision(2) << " EUR " << galutk << setprecision(2) << " INR." << endl;
+            cout << pradk << fixed <<setprecision(2) << " EUR " << galutk << fixed <<setprecision(2) << " INR." << endl;
             break;
             case 4:
             cout << "Irasykite norima GBP valiutos kieki" << endl;
             cin >> pradk;
             galutk = pradk / GBPcompare;
-            cout << fixed << pradk << setprecision(2) << " GBP " << galutk << setprecision(2) << " EUR." << endl;
+            cout << pradk << fixed <<setprecision(2) << " GBP " << galutk << fixed <<setprecision(2) << " EUR." << endl;
             break;
             case 5:
             cout << "Irasykite norima USD valiutos kieki" << endl;
             cin >> pradk;
             galutk = pradk / USDcompare;
-            cout << fixed << pradk << setprecision(2) << " USD " << galutk << setprecision(2) << " EUR." << endl;
+            cout << pradk << fixed <<setprecision(2) << " USD " << galutk << fixed <<setprecision(2) << " EUR." << endl;
             break;
             case 6:
             cout << "Irasykite norima INR valiutos kieki" << endl;
             cin >> pradk;
             galutk = pradk / INRcompare;
-            cout << fixed << pradk << setprecision(2) << " INR " << galutk << setprecision(2) << " EUR." << endl;
+            cout  << pradk << fixed <<setprecision(2) << " INR " << galutk << fixed <<setprecision(2) << " EUR." << endl;
             break;
             case 7:
                 cout << "Jus isejote is valiutos konvertavimo/palyginimo programos" << endl;
@@ -79,7 +79,7 @@ void getCompareCurrency() {
 //Valiutos pirkimas vartotojas iraso norima suma uz kuria nori nusipirkti valiuta ir gale jis pamatys uz kiek euru pirko ir koki kieki valiutos gavo
 void getBuyCurrency() {
     int ope = 0;
-    int pradinisk;
+    double pradinisk;
     double galutinisk;
     while (ope != 7) {
         cout << "Pasirinkite, kuria valiuta Jus norite nusipirkti: EUR, GBP, USD arba INR." << endl;
@@ -95,37 +95,37 @@ void getBuyCurrency() {
             cout << "Irasykite norima EUR kieki uz kuri noresite nusipirkti GBP valiuta" << endl;
             cin >> pradinisk;
             galutinisk = pradinisk * GBPbuy;
-            cout << fixed << pradinisk << setprecision(2) << " EUR " << galutinisk << setprecision(2) << " GBP" << endl;
+            cout << pradinisk << fixed <<setprecision(2) << " EUR " << galutinisk << fixed <<setprecision(2) << " GBP" << endl;
             break;
             case 2:
             cout << "Irasykite norima EUR kieki uz kuri noresite nusipirkti USD valiuta" << endl;
             cin >> pradinisk;
             galutinisk = pradinisk * USDbuy;
-            cout << fixed << pradinisk << setprecision(2) << " EUR " << galutinisk << setprecision(2) << " USD" << endl;
+            cout<< pradinisk << fixed <<setprecision(2) << " EUR " << galutinisk << fixed <<setprecision(2) << " USD" << endl;
             break;
             case 3:
             cout << "Irasykite norima EUR kieki uz kuri noresite nusipirkti INR valiuta" << endl;
             cin >> pradinisk;
             galutinisk = pradinisk * INRbuy;
-            cout << fixed << pradinisk << setprecision(2) << " EUR " << galutinisk << setprecision(2) << " INR" << endl;
+            cout << pradinisk << fixed <<setprecision(2) << " EUR " << galutinisk << fixed <<setprecision(2) << " INR" << endl;
             break;
             case 4:
             cout << "Irasykite norima GBP kieki uz kuri noresite nusipirkti EUR valiuta" << endl;
             cin >> pradinisk;
             galutinisk = pradinisk / GBPbuy;
-            cout << fixed << pradinisk << setprecision(2) << " GBP " << galutinisk << setprecision(2) << " EUR" << endl;
+            cout << pradinisk << fixed <<setprecision(2) << " GBP " << galutinisk << fixed <<setprecision(2) << " EUR" << endl;
             break;
             case 5:
             cout << "Irasykite norima USD kieki uz kuri noresite nusipirkti EUR valiuta" << endl;
             cin >> pradinisk;
             galutinisk = pradinisk / USDbuy;
-            cout << fixed << pradinisk << setprecision(2) << " USD " << galutinisk << setprecision(2) << " EUR" << endl;
+            cout << pradinisk << fixed <<setprecision(2) << " USD " << galutinisk << fixed <<setprecision(2) << " EUR" << endl;
             break;
             case 6:
             cout << "Irasykite norima INR kieki uz kuri noresite nusipirkti EUR valiuta" << endl;
             cin >> pradinisk;
             galutinisk = pradinisk / INRbuy;
-            cout << fixed << pradinisk << setprecision(2) << " INR " << galutinisk << setprecision(2) << " EUR" << endl;
+            cout << pradinisk << fixed <<setprecision(2) << " INR " << galutinisk << fixed <<setprecision(2) << " EUR" << endl;
             break;
             case 7:
                 cout << "Jus isejote is valiutos pirkimo programos" << endl;
@@ -140,7 +140,7 @@ void getBuyCurrency() {
 //valiutos pardavimas kur vartotojas irasys koki kieki valiutos nori parduoti ir pamatys kiek jis gaus pinigu uz tai
 void getSellCurrency() {
     int operac = 0;
-    int pradinis;
+    double pradinis;
     double galutinis;
     while (operac != 7) {
         cout << "Pasirinkite kuria valiuta Jus norite parduoti: EUR, GBP, USD arba INR" << endl;
@@ -156,37 +156,37 @@ void getSellCurrency() {
             cout << "Irasykite valiutos GBP kieki kuriJus norite parduoti uz Eurus" << endl;
             cin >> pradinis;
             galutinis = pradinis * GBPsell;
-            cout << fixed << pradinis << setprecision(2) << " EUR " << galutinis << setprecision(2) << " GBP" << endl;
+            cout << pradinis << fixed <<setprecision(2) << " GBP " << galutinis << fixed <<setprecision(2) << " EUR" << endl;
             break;
             case 2:
             cout << "Irasykite valiutos USD kieki kuriJus norite parduoti uz Eurus" << endl;
             cin >> pradinis;
             galutinis = pradinis * USDsell;
-            cout << fixed << pradinis << setprecision(2) << " EUR " << galutinis << setprecision(2) << " USD" << endl;
+            cout << pradinis << fixed <<setprecision(2) << " USD " << galutinis << fixed <<setprecision(2) << " EUR" << endl;
             break;
             case 3:
-            cout << "Irasykite valiutos INR kieki kuriJus norite parduoti uz Eurus" << endl;
+            cout << "Irasykite valiutos INR kieki kuri Jus norite parduoti uz Eurus" << endl;
             cin >> pradinis;
             galutinis = pradinis * INRsell;
-            cout << fixed << pradinis << setprecision(2) << " EUR " << galutinis << setprecision(2) << " INR" << endl;
+            cout << pradinis << fixed <<setprecision(2) << " INR " << galutinis << fixed <<setprecision(2) << " EUR" << endl;
             break;
             case 4:
             cout << "Irasykite valiutos EUR kieki kuri Jus norite parduoti uz GBP" << endl;
             cin >> pradinis;
             galutinis = pradinis / GBPsell;
-            cout << fixed << pradinis << setprecision(2) << " GBP " << galutinis << setprecision(2) << " EUR" << endl;
+            cout << pradinis << fixed <<setprecision(2) << " EUR " << galutinis << fixed <<setprecision(2) << " GBP" << endl;
             break;
             case 5:
             cout << "Irasykite valiutos EUR kieki kuri Jus norite parduoti uz USD" << endl;
             cin >> pradinis;
             galutinis = pradinis / USDsell;
-            cout << fixed << pradinis << setprecision(2) << " USD " << galutinis << setprecision(2) << " EUR" << endl;
+            cout << pradinis << fixed <<setprecision(2) << " EUR " << galutinis << fixed <<setprecision(2) << " USD" << endl;
             break;
             case 6:
             cout << "Irasykite valiutos EUR kieki kuri Jus norite parduoti uz INR" << endl;
             cin >> pradinis;
             galutinis = pradinis / INRsell;
-            cout << fixed << pradinis << setprecision(2) << " INR " << galutinis << setprecision(2) << " EUR" << endl;
+            cout << pradinis << fixed <<setprecision(2) << " EUR " << galutinis << fixed <<setprecision(2) << " INR" << endl;
             break;
             case 7:
                 cout << "Jus isejote is valiutos pardavimo programos" << endl;
@@ -202,7 +202,7 @@ int main() {
     int operacija = 0;
 
     //Maine mes galime pasirinkti programa kuria norime ir mus iskarto nukreipia i viena is 3 funkciju kurioje yra atliekami visi pasirinkimai ir sprendimai
-    //Tose funkcijuose yra daugiau oasirinkimu, kurie palygina, nuperka arba parduoda valiuta
+    //Tose funkcijuose yra daugiau pasirinkimu, kurie palygina, nuperka arba parduoda valiuta
     while (operacija != 4) {
         cout <<"Valiutos pasirinkimas"<<endl;
         cout <<"1. Valiutos palyginimas"<<endl;
