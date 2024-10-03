@@ -156,37 +156,37 @@ void getSellCurrency() {
             cout << "Irasykite valiutos GBP kieki kuriJus norite parduoti uz Eurus" << endl;
             cin >> pradinis;
             galutinis = pradinis * GBPsell;
-            cout << pradinis << fixed <<setprecision(2) << " GBP " << galutinis << fixed <<setprecision(2) << " EUR" << endl;
+            cout << pradinis << fixed <<setprecision(2) << " kiekis " << galutinis << fixed <<setprecision(2) << " GBP" << endl;
             break;
             case 2:
             cout << "Irasykite valiutos USD kieki kuriJus norite parduoti uz Eurus" << endl;
             cin >> pradinis;
             galutinis = pradinis * USDsell;
-            cout << pradinis << fixed <<setprecision(2) << " USD " << galutinis << fixed <<setprecision(2) << " EUR" << endl;
+            cout << pradinis << fixed <<setprecision(2) << " kiekis " << galutinis << fixed <<setprecision(2) << " USD" << endl;
             break;
             case 3:
             cout << "Irasykite valiutos INR kieki kuri Jus norite parduoti uz Eurus" << endl;
             cin >> pradinis;
             galutinis = pradinis * INRsell;
-            cout << pradinis << fixed <<setprecision(2) << " INR " << galutinis << fixed <<setprecision(2) << " EUR" << endl;
+            cout << pradinis << fixed <<setprecision(2) << " kiekis " << galutinis << fixed <<setprecision(2) << " INR" << endl;
             break;
             case 4:
             cout << "Irasykite valiutos EUR kieki kuri Jus norite parduoti uz GBP" << endl;
             cin >> pradinis;
             galutinis = pradinis / GBPsell;
-            cout << pradinis << fixed <<setprecision(2) << " EUR " << galutinis << fixed <<setprecision(2) << " GBP" << endl;
+            cout << pradinis << fixed <<setprecision(2) << " kiekis " << galutinis << fixed <<setprecision(2) << " EUR" << endl;
             break;
             case 5:
             cout << "Irasykite valiutos EUR kieki kuri Jus norite parduoti uz USD" << endl;
             cin >> pradinis;
             galutinis = pradinis / USDsell;
-            cout << pradinis << fixed <<setprecision(2) << " EUR " << galutinis << fixed <<setprecision(2) << " USD" << endl;
+            cout << pradinis << fixed <<setprecision(2) << " kiekis " << galutinis << fixed <<setprecision(2) << " EUR" << endl;
             break;
             case 6:
             cout << "Irasykite valiutos EUR kieki kuri Jus norite parduoti uz INR" << endl;
             cin >> pradinis;
             galutinis = pradinis / INRsell;
-            cout << pradinis << fixed <<setprecision(2) << " EUR " << galutinis << fixed <<setprecision(2) << " INR" << endl;
+            cout << pradinis << fixed <<setprecision(2) << " kiekis " << galutinis << fixed <<setprecision(2) << " EUR" << endl;
             break;
             case 7:
                 cout << "Jus isejote is valiutos pardavimo programos" << endl;
