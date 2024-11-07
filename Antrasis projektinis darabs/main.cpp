@@ -52,6 +52,7 @@ void game() {
     }
 }
 
+//Isveda visus skaicius iki vartotojo irasyto skaiciaus ir prie tu kurie dalinasi is 3  bus fizz, 5 bus buzz, o is abieju rasys fizzbuzz
 void void_fizzbuzz(int n) {
     for(int i = 1; i <= n; i++) {
         if(i % 3 == 0 && i % 5 == 0) {
@@ -69,7 +70,7 @@ void void_fizzbuzz(int n) {
     }
 }
 
-
+//Vartotojas parirenka viena is programu kuria jis nori naudoti ir atlikti darbus
 int main() {
 
     int operacija = 0;
