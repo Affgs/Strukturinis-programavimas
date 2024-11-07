@@ -2,6 +2,42 @@
 	"entries" : 
 	[
 		{
+			"name" : "Antrasis_projektinis_darabs_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/Users/agneg/Documents/Strukturinis-programavimas/Antrasis projektinis darabs/cmake-build-debug"
+		},
+		{
+			"name" : "Antrasis_projektinis_darabs_IS_TOP_LEVEL",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "ON"
+		},
+		{
+			"name" : "Antrasis_projektinis_darabs_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "C:/Users/agneg/Documents/Strukturinis-programavimas/Antrasis projektinis darabs"
+		},
+		{
 			"name" : "CMAKE_ADDR2LINE",
 			"properties" : 
 			[
@@ -55,7 +91,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/agneg/Documents/Strukturinis p/Pirmasis projektinis darbas/cmake-build-debug"
+			"value" : "c:/Users/agneg/Documents/Strukturinis-programavimas/Antrasis projektinis darabs/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -575,7 +611,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/agneg/Documents/Strukturinis p/Pirmasis projektinis darbas/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "C:/Users/agneg/Documents/Strukturinis-programavimas/Antrasis projektinis darabs/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -647,7 +683,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/agneg/Documents/Strukturinis p/Pirmasis projektinis darbas"
+			"value" : "C:/Users/agneg/Documents/Strukturinis-programavimas/Antrasis projektinis darabs"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -659,7 +695,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Program Files (x86)/Pirmasis_projektinis_darbas"
+			"value" : "C:/Program Files (x86)/Antrasis_projektinis_darabs"
 		},
 		{
 			"name" : "CMAKE_LINKER",
@@ -875,7 +911,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "Pirmasis_projektinis_darbas"
+			"value" : "Antrasis_projektinis_darabs"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1268,42 +1304,6 @@
 			],
 			"type" : "BOOL",
 			"value" : "FALSE"
-		},
-		{
-			"name" : "Pirmasis_projektinis_darbas_BINARY_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "C:/Users/agneg/Documents/Strukturinis p/Pirmasis projektinis darbas/cmake-build-debug"
-		},
-		{
-			"name" : "Pirmasis_projektinis_darbas_IS_TOP_LEVEL",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "ON"
-		},
-		{
-			"name" : "Pirmasis_projektinis_darbas_SOURCE_DIR",
-			"properties" : 
-			[
-				{
-					"name" : "HELPSTRING",
-					"value" : "Value Computed by CMake"
-				}
-			],
-			"type" : "STATIC",
-			"value" : "C:/Users/agneg/Documents/Strukturinis p/Pirmasis projektinis darbas"
 		},
 		{
 			"name" : "_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED",

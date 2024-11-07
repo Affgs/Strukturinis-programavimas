@@ -1,0 +1,3 @@
+C:/Users/agneg/Documents/Strukturinis-programavimas/Antrasis projektinis darabs/cmake-build-debug/CMakeFiles/Antrasis_projektinis_darabs.dir
+C:/Users/agneg/Documents/Strukturinis-programavimas/Antrasis projektinis darabs/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/agneg/Documents/Strukturinis-programavimas/Antrasis projektinis darabs/cmake-build-debug/CMakeFiles/rebuild_cache.dir

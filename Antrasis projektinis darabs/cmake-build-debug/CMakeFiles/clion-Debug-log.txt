@@ -1,0 +1,4 @@
+"C:\clion\CLion 2024.2.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/clion/CLion 2024.2.2/bin/ninja/win/x64/ninja.exe" -G Ninja -S "C:\Users\agneg\Documents\Strukturinis-programavimas\Antrasis projektinis darabs" -B "C:\Users\agneg\Documents\Strukturinis-programavimas\Antrasis projektinis darabs\cmake-build-debug"
+-- Configuring done (1.8s)
+-- Generating done (0.3s)
+-- Build files have been written to: C:/Users/agneg/Documents/Strukturinis-programavimas/Antrasis projektinis darabs/cmake-build-debug

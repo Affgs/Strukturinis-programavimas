@@ -12,7 +12,8 @@ double USDbuy = 1.0547;
 double USDsell = 1.1309;
 double INRcompare = 88.8260;
 double INRbuy = 85.2614;
-double INRsell = 92.8334;
+double INRsell = 92.83341
+;
 
 //Kovertavimas i kita valiuta ir tuo paciu tai yra palyginimas kiek euru gali buti kitos valiutos  arba atvirksciai
 //Vartotojas pasirenka is kokios valiutos i kokia kita valiuta jis nori konvertuoti iraso suma ir gali pamatyti irasyta suma ir salia konvertuotos valiutos suma
