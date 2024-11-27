@@ -1,0 +1,3 @@
+C:/Users/agneg/Documents/Strukturinis-programavimas/Trecias projektinis darbas/cmake-build-debug/CMakeFiles/Trecias_projektinis_darbas.dir
+C:/Users/agneg/Documents/Strukturinis-programavimas/Trecias projektinis darbas/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/agneg/Documents/Strukturinis-programavimas/Trecias projektinis darbas/cmake-build-debug/CMakeFiles/rebuild_cache.dir
