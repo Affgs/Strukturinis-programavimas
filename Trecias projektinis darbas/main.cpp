@@ -4,44 +4,138 @@
 
 using namespace std;
 
-
+const char ABECELE[26] = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
 //Si funkcija uzkoduoja vartotojo ivesta zodi.
 //Raktas yra labai svarbus nes jis nurodo kokia raide reikes naudoti sifruojant zodi
-string encode(string text, int key) {
+string encode(const char *text, char *key) {
 
-    char ABECELE[] = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
+    char encoded[50];
+    int textIndex[50];
+    int keyIndex[50];
+    int tekstoTlgis, keyilgis;
 
-    string encoded = "";
-
-    for (int i = 0; i < text.length(); i++){
-        int low = tolower(text[i]);
-        int index = low - 97;
-        int shift = (index + key) % 26;
-        char character = ABECELE[shift];
-        encoded.push_back(character); // cia ivyksta kaip grandine nes kiekviena zodi ikelia ir susidaro pilnas uzsifruotas zodis
+    tekstoTlgis = strlen(text);
+    for (int i = 0; i < tekstoTlgis; i++) {
+        for(int j=0; j<sizeof(ABECELE); j++) {
+            if(tolower(text[i]) == ABECELE[j]) {
+                textIndex[i] = j ;
+            }
+        }
     }
+
+        keyilgis = strlen(key);
+        for(int i=0; i< keyilgis; i++) {
+            for(int j=0; j<sizeof(ABECELE); j++) {
+            if(tolower(key[i]) == ABECELE[j]) {
+               keyIndex[i] = j ;
+            }
+            }
+        }
+
+        cout << "Uzkoduotas tekstas: " << '\n';
+        for(int i=0; i< tekstoTlgis; i++) {
+            int keyPradzia = i % keyilgis;
+            encoded[i] = (textIndex[i] + keyIndex[keyPradzia]) % sizeof(ABECELE);
+            cout << ABECELE[encoded[i]];
+        }
+    cout << '\n';
     return encoded; // grazina gauta zodi i main dali, kurioje yra isvedamas rezultatas
 }
 
+
 //Si funkcija desifruoja vartotojo ivesta uzsifruota zodi su raktu
-string decod(string encode, int key) {
+string decod(const char *text, char *key) {
 
-    char ABECELE[] = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
+    char decoded[50];
+    int textIndex[50];
+    int keyIndex[50];
+    int tekstoTlgis, keyilgis;
 
-    string decoded = "";
-
-    for (int i = 0; i < encode.length(); i++) {
-        int low = tolower(encode[i]);
-        int index = low - 97;
-        int shift = index - key;
-        // cia panasiai kaip if salyga tik vienoje eiluteje kur pliusas yra true kur procentas yra false
-        //si salyga reikalinga tam, kad skaiciai eitu is kitos puses
-        (shift < 0) ? shift = shift + 26 : shift = shift % 26;
-        decoded.push_back(ABECELE[shift]); // cia ivyksta kaip grandine nes kiekviena zodi ikelia ir susidaro pilnas desifruotas zodis
+    tekstoTlgis = strlen(text);
+    for (int i = 0; i < tekstoTlgis; i++) {
+        for(int j=0; j<sizeof(ABECELE); j++) {
+            if(tolower(text[i]) == ABECELE[j]) {
+                textIndex[i] = j ;
+            }
+        }
     }
+
+    keyilgis = strlen(key);
+    for(int i=0; i< keyilgis; i++) {
+        for(int j=0; j<sizeof(ABECELE); j++) {
+            if(tolower(key[i]) == ABECELE[j]) {
+                keyIndex[i] = j ;
+            }
+        }
+    }
+
+    cout << "Neuzkoduotas tekstas: " << '\n';
+    for(int i=0; i< tekstoTlgis; i++) {
+        int keyPradzia = i % keyilgis;
+        decoded[i] = (textIndex[i] - keyIndex[keyPradzia] + sizeof(ABECELE)) % sizeof(ABECELE);
+        cout << ABECELE[decoded[i]];
+    }
+    cout << '\n';
     return decoded; // grazina gauta zodi i main dali, kurioje yra isvedamas rezultatas
 }
 
+int getASCII(char ch) {
+    return static_cast<int>(ch);
+}
+
+int getOutOfASCII (int skaicius) {
+    return static_cast<char>(skaicius);
+}
+
+// ASCII koduote
+void encode2() {
+    char text2[50];
+    char key2[50];
+    char encoded2[50];
+
+    cout << "Iveskite norima zodi, kuri norite uzkoduoti: " << '\n';
+    cin >> text2;
+    cout << "Iveskie rakta: " << '\n';
+    cin >> key2;
+
+    int textIlgis = strlen(text2);
+    int keyIlgis = strlen(key2);
+
+    for(int i=0; i< textIlgis; i++) {
+        int textASCII = getASCII(text2[i]);
+        int keyASCII = getASCII(key2[i%keyIlgis]);
+
+        //Kad reikste ASCII koduoteje butu nuo 33 iki 127
+        encoded2[i] = (textASCII + keyASCII - 33) % 94 + 33;
+        cout << encoded2[i]; // isvedame uzsifruota zodi
+    }
+    cout << '\n';
+}
+
+void decode2() {
+    char text2[50];
+    char key2[50];
+    char decoded2[50];
+
+    cout << "Iveskite uzkoduota zodi: " << '\n';
+    cin >> text2;
+    cout << "Iveskie rakta: " << '\n';
+    cin >> key2;
+
+    int textIlgis = strlen(text2);
+    int keyIlgis = strlen(key2);
+
+    for(int i=0; i< textIlgis; i++) {
+        int textASCII = getASCII(text2[i]);
+        int keyASCII = getASCII(key2[i%keyIlgis]);
+
+        decoded2[i] = (textASCII - keyASCII - 33 + 94) % 94 + 33; // kad isvedinetu nuo 33 iki 127
+        // konvertuojam i simboli ir isvedame
+        char decoded3 = getOutOfASCII(decoded2[i]);
+        cout << decoded3;
+    }
+    cout << '\n';
+}
 
 int main() {
    int op=0;
@@ -62,25 +156,24 @@ int main() {
             cin >> pas;
             if (pas == 1) {
                 cout << "Iveskite norima zodi, kuri norite uzkoduoti: " << '\n';
-                string text = "";
+                char text[50];
                 cin >> text;
                 cout << "Iveskie rakta: " << '\n';
-                int key;
+                char key[50];
                 cin >> key;
-                key = key % 26;
 
                 string encoded = encode(text, key);
                 cout << encoded << '\n';
             }
                 else if (pas == 2) {
                     cout << "Iveskite uzsifruota teksta: " << '\n';
-                    string encode = "";
-                    cin >> encode;
+                   char text[50];
+                    cin >> text;
                     cout << "Iveskie rakta: " << '\n';
-                    int key;
+                    char key[50];
                     cin >> key;
 
-                    string decoded = decod(encode, key);
+                    string decoded = decod(text, key);
                     cout << decoded << '\n';
                 }
             else {
@@ -88,7 +181,19 @@ int main() {
             }
             break;
             case 2:
-                cout << "ASCII koduote" << '\n';
+                cout << "Sifravimas ir desifravimas su ASCII" << '\n';
+            cout << "1. Sifravimas" << '\n';
+            cout << "2. Desifravimas" << '\n';
+            cin >> pas;
+            if(pas == 1) {
+                encode2();
+            }
+            else if (pas == 2) {
+              decode2();
+            }
+            else {
+                cout << "Tokio pasirinkimo nera. Bandykite dar karta" << '\n';
+            }
                 break;
             case 3:
                 cout << "Jus isejote is programos" << '\n';
