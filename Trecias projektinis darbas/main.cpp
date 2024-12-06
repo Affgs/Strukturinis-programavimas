@@ -129,7 +129,7 @@ void decode2() {
         int textASCII = getASCII(text2[i]);
         int keyASCII = getASCII(key2[i%keyIlgis]);
 
-        decoded2[i] = (textASCII - keyASCII - 33 + 94) % 94 + 33; // kad isvedinetu nuo 33 iki 127
+        decoded2[i] = (textASCII - keyASCII - 33 + 94 + 94) % 94 + 33; // kad isvedinetu nuo 33 iki 127
         // konvertuojam i simboli ir isvedame
         char decoded3 = getOutOfASCII(decoded2[i]);
         cout << decoded3;
